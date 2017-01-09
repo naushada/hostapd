@@ -1,0 +1,12 @@
+https://translate.google.co.in/translate?hl=en&sl=zh-CN&u=http://www.latelee.org/net-study/hostapd-usage-under-ubuntu14-04.html&prev=search
+
+####
+To fix the libnl compilation issue, -I/usr/include/libnl3 is added to DRV_CFLAGS
+
+fdef CONFIG_DRIVER_NL80211
+ 39 DRV_CFLAGS += -DCONFIG_DRIVER_NL80211 -I/usr/include/libnl3
+
+###################
+#For wpa_supplicant
+1. copy defconfig to .config
+2. uncomment CONFIG_LIBNL32=y
